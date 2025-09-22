@@ -1,8 +1,9 @@
-import React from "react";
+import React from 'react'
 
-const Icon_menu = () => {
+const Sidebar_style_2 = () => {
   return (
-  <div className="wrapper sidebar_minimize">
+    <div>
+      <div className="wrapper sidebar_minimize">
       {/* <!-- Sidebar --> */}
   <div className="sidebar" data-background-color="dark">
   <div className="sidebar-logo">
@@ -1887,20 +1888,8 @@ const Icon_menu = () => {
       </div>
       {/* <!-- End Custom template --> */}
     </div>
-  );
-};
+    </div>
+  )
+}
 
-export default Icon_menu;
-
-
-// import React from 'react'
-
-// const Icon_menu = () => {
-//   return (
-//     <div>
-//       <h1>icon</h1>
-//     </div>
-//   )
-// }
-
-// export default Icon_menu
+export default Sidebar_style_2

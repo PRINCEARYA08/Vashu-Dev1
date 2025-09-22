@@ -4,7 +4,7 @@ import profileImg from "../../assets/img/profile.jpg";
 const Dashboard = () => {
   return (
     <div>
-  <div className="container">
+  <div className="container ps-4 pe-0" style={{maxWidth: '100%', marginLeft: '16rem', marginRight: 0, paddingRight: 0}}>
   <div className="page-inner">
           <div className="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4" style={{ marginTop: "4rem" }}>
             <div>

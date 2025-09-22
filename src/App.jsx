@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard/Dashboard.jsx'
 import './App.css'
 import Icon_menu from './pages/Icon_menu.jsx'
 import Widgets from './pages/Widgets.jsx'
+import Avatars from './components/Avatars/Avatars.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,11 +15,12 @@ function App() {
   return (
     <>
       <div>
-        {/* <Navbar/> */}
+        <Navbar/>
         {/* <Saidbar/> */}
         {/* <Dashboard/> */}
         {/* <Icon_menu/> */}
-        <Widgets/>
+        {/* <Avatars/> */}
+        {/* <Widgets/> */}
       </div>
     </>
   )

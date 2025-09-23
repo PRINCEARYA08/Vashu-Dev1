@@ -1,4 +1,3 @@
-
 import jmDenis from "../../assets/img/jm_denis.jpg";
 import chadEngle from "../../assets/img/chadengle.jpg";
 import mlane from "../../assets/img/mlane.jpg";
@@ -132,11 +131,7 @@ const Avatars = () => {
                 <div class="card-body">
                   <p class="demo">
                     <div class="avatar">
-                      <img
-                        src={jmDenis}
-                        alt="..."
-                        class="avatar-img rounded"
-                      />
+                      <img src={jmDenis} alt="..." class="avatar-img rounded" />
                     </div>
 
                     <div class="avatar">

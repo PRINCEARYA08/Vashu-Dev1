@@ -1,8 +1,9 @@
 import React from "react";
 import logoVasu from "../../assets/img/kaiadmin/logoVasu1.jpg";
+// import Avatars from './components/Avatars/Avatars.jsx';
 import { Link } from "react-router-dom";
 // import avatars from "./../../components/";
-
+// import Avatars from "../Avatars/Avatars";
 
 const Saidbar = () => {
   return (
@@ -79,9 +80,9 @@ const Saidbar = () => {
               <div className="collapse" id="base">
                 <ul className="nav nav-collapse">
                   <li>
-                    <a href="./components/avatars">
+                    {/* <link href={{Avatars}}>
                       <span className="sub-item">Avatars</span>
-                    </a>
+                    </link> */}
                   </li>
                   <li>
                     <a href="./components/buttons">

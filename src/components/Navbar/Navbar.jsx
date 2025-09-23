@@ -1,7 +1,12 @@
+
 import React from "react";
 import profileImg from "../../assets/img/profile.jpg";
 import logoVasu from "../../assets/img/kaiadmin/logoVasu1.jpg";
 import { Link } from "react-router-dom";
+
+// Example: Importing another image from assets (optional)
+import importedLogo from "../../assets/react.svg";
+
 
 
 const Navbar = () => {
@@ -12,14 +17,29 @@ const Navbar = () => {
           {/* <!-- Logo Header --> */}
           <div className="logo-header" data-background-color="dark">
             <a href="index.html" className="logo">
-              <div>
-                            <img
-                              src={logoVasu}
-                              alt="navbar brand"
-                              className="navbar-brand"
-                              height={45}
-                            />
-                          </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                {/* Imported image */}
+                <img
+                  src={logoVasu}
+                  alt="navbar brand imported"
+                  className="navbar-brand"
+                  height={45}
+                />
+                {/* Image from public folder */}
+                <img
+                  src="/vite.svg"
+                  alt="navbar brand public"
+                  className="navbar-brand"
+                  height={45}
+                />
+                {/* Another imported image example */}
+                <img
+                  src={importedLogo}
+                  alt="navbar brand imported react"
+                  className="navbar-brand"
+                  height={45}
+                />
+              </div>
             </a>
             <div className="nav-toggle">
               <button className="btn btn-toggle toggle-sidebar">
@@ -49,7 +69,7 @@ const Navbar = () => {
                   type="text"
                   placeholder="Search ..."
                   className="form-control"
-                  style={{ background: '#f7f8fa' }}
+                  style={{ background: '#285fcdff' }}
                 />
               </div>
             </nav>
@@ -321,9 +341,16 @@ const Navbar = () => {
                   aria-expanded="false"
                 >
                   <div className="avatar-sm">
+                    {/* Profile image from public folder */}
                     <img
-                      src="assets/img/profile.jpg"
-                      alt="..."
+                      src="/assets/img/profile.jpg"
+                      alt="profile public"
+                      className="avatar-img rounded-circle"
+                    />
+                    {/* Profile image imported */}
+                    <img
+                      src={profileImg}
+                      alt="profile imported"
                       className="avatar-img rounded-circle"
                     />
                   </div>

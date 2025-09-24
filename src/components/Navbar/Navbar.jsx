@@ -1,63 +1,17 @@
-
 import React from "react";
 import profileImg from "../../assets/img/profile.jpg";
 import logoVasu from "../../assets/img/kaiadmin/logoVasu1.jpg";
-import { Link } from "react-router-dom";
-
-// Example: Importing another image from assets (optional)
 import importedLogo from "../../assets/react.svg";
-
-
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="main-panel">
       <div className="main-header">
-        <div className="main-header-logo">
-          {/* <!-- Logo Header --> */}
-          <div className="logo-header" data-background-color="dark">
-            <a href="index.html" className="logo">
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                {/* Imported image */}
-                <img
-                  src={logoVasu}
-                  alt="navbar brand imported"
-                  className="navbar-brand"
-                  height={45}
-                />
-                {/* Image from public folder */}
-                <img
-                  src="/vite.svg"
-                  alt="navbar brand public"
-                  className="navbar-brand"
-                  height={45}
-                />
-                {/* Another imported image example */}
-                <img
-                  src={importedLogo}
-                  alt="navbar brand imported react"
-                  className="navbar-brand"
-                  height={45}
-                />
-              </div>
-            </a>
-            <div className="nav-toggle">
-              <button className="btn btn-toggle toggle-sidebar">
-                <i className="gg-menu-right"></i>
-              </button>
-              <button className="btn btn-toggle sidenav-toggler">
-                <i className="gg-menu-left"></i>
-              </button>
-            </div>
-            <button className="topbar-toggler more">
-              <i className="gg-more-vertical-alt"></i>
-            </button>
-          </div>
-          {/* <!-- End Logo Header --> */}
-        </div>
-        {/* <!-- Navbar Header --> */}
+        {/* Navbar Header */}
         <nav className="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
           <div className="container-fluid">
+            {/* Search Bar */}
             <nav className="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
               <div className="input-group">
                 <div className="input-group-prepend">
@@ -69,125 +23,17 @@ const Navbar = () => {
                   type="text"
                   placeholder="Search ..."
                   className="form-control"
-                  style={{ background: '#285fcdff' }}
                 />
               </div>
             </nav>
 
-            {/* User/profile section right */}
-            <ul className="navbar-nav topbar-nav ms-auto align-items-center flex-row gap-3" style={{ flex: 'none' }}>
-              <li className="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none">
-                <a
-                  className="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                >
-                  <i className="fa fa-search"></i>
-                </a>
-                <ul className="dropdown-menu dropdown-search animated fadeIn">
-                  <form className="navbar-left navbar-form nav-search">
-                    <div className="input-group">
-                      <input
-                        type="text"
-                        placeholder="Search ..."
-                        className="form-control"
-                      />
-                    </div>
-                  </form>
-                </ul>
-              </li>
+            {/* Right Navbar */}
+            <ul className="navbar-nav topbar-nav ms-md-auto align-items-center">
+              {/* Example Notification Dropdown */}
               <li className="nav-item topbar-icon dropdown hidden-caret">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
-                  id="messageDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i className="fa fa-envelope"></i>
-                </a>
-                <ul
-                  className="dropdown-menu messages-notif-box animated fadeIn"
-                  aria-labelledby="messageDropdown"
-                >
-                  <li>
-                    <div className="dropdown-title d-flex justify-content-between align-items-center">
-                      Messages
-                      <a href="#" className="small">
-                        Mark all as read
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="message-notif-scroll scrollbar-outer">
-                      <div className="notif-center">
-                        <a href="#">
-                          <div className="notif-img">
-                            <img
-                              src="assets/img/jm_denis.jpg"
-                              alt="Img Profile"
-                            />
-                          </div>
-                          <div className="notif-content">
-                            <span className="subject">Jimmy Denis</span>
-                            <span className="block"> How are you ? </span>
-                            <span className="time">5 minutes ago</span>
-                          </div>
-                        </a>
-                        <a href="#">
-                          <div className="notif-img">
-                            <img
-                              src="assets/img/chadengle.jpg"
-                              alt="Img Profile"
-                            />
-                          </div>
-                          <div className="notif-content">
-                            <span className="subject">Chad</span>
-                            <span className="block"> Ok, Thanks ! </span>
-                            <span className="time">12 minutes ago</span>
-                          </div>
-                        </a>
-                        <a href="#">
-                          <div className="notif-img">
-                            <img src="assets/img/mlane.jpg" alt="Img Profile" />
-                          </div>
-                          <div className="notif-content">
-                            <span className="subject">Jhon Doe</span>
-                            <span className="block">
-                              Ready for the meeting today...
-                            </span>
-                            <span className="time">12 minutes ago</span>
-                          </div>
-                        </a>
-                        <a href="#">
-                          <div className="notif-img">
-                            <img src="assets/img/talha.jpg" alt="Img Profile" />
-                          </div>
-                          <div className="notif-content">
-                            <span className="subject">Talha</span>
-                            <span className="block"> Hi, Apa Kabar ? </span>
-                            <span className="time">17 minutes ago</span>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <a className="see-all" href="javascript:void(0);">
-                      See all messages<i className="fa fa-angle-right"></i>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item topbar-icon dropdown hidden-caret">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
+                  href="/#"
                   id="notifDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -203,160 +49,50 @@ const Navbar = () => {
                 >
                   <li>
                     <div className="dropdown-title">
-                      You have 4 new notification
+                      You have 4 new notifications
                     </div>
                   </li>
                   <li>
                     <div className="notif-scroll scrollbar-outer">
                       <div className="notif-center">
-                        <a href="#">
+                        <a href="/#">
                           <div className="notif-icon notif-primary">
                             <i className="fa fa-user-plus"></i>
                           </div>
                           <div className="notif-content">
-                            <span className="block"> New user registered </span>
+                            <span className="block">New user registered</span>
                             <span className="time">5 minutes ago</span>
-                          </div>
-                        </a>
-                        <a href="#">
-                          <div className="notif-icon notif-success">
-                            <i className="fa fa-comment"></i>
-                          </div>
-                          <div className="notif-content">
-                            <span className="block">
-                              Rahmad commented on Admin
-                            </span>
-                            <span className="time">12 minutes ago</span>
-                          </div>
-                        </a>
-                        <a href="#">
-                          <div className="notif-img">
-                            <img
-                              src="assets/img/profile2.jpg"
-                              alt="Img Profile"
-                            />
-                          </div>
-                          <div className="notif-content">
-                            <span className="block">
-                              Reza send messages to you
-                            </span>
-                            <span className="time">12 minutes ago</span>
-                          </div>
-                        </a>
-                        <a href="#">
-                          <div className="notif-icon notif-danger">
-                            <i className="fa fa-heart"></i>
-                          </div>
-                          <div className="notif-content">
-                            <span className="block"> Farrah liked Admin </span>
-                            <span className="time">17 minutes ago</span>
                           </div>
                         </a>
                       </div>
                     </div>
                   </li>
                   <li>
-                    <a className="see-all" href="javascript:void(0);">
+                    <a className="see-all" href="/#">
                       See all notifications<i className="fa fa-angle-right"></i>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li className="nav-item topbar-icon dropdown hidden-caret">
-                <a
-                  className="nav-link"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  aria-expanded="false"
-                >
-                  <i className="fas fa-layer-group"></i>
-                </a>
-                <div className="dropdown-menu quick-actions animated fadeIn">
-                  <div className="quick-actions-header">
-                    <span className="title mb-1">Quick Actions</span>
-                    <span className="subtitle op-7">Shortcuts</span>
-                  </div>
-                  <div className="quick-actions-scroll scrollbar-outer">
-                    <div className="quick-actions-items">
-                      <div className="row m-0">
-                        <a className="col-6 col-md-4 p-0" href="#">
-                          <div className="quick-actions-item">
-                            <div className="avatar-item bg-danger rounded-circle">
-                              <i className="far fa-calendar-alt"></i>
-                            </div>
-                            <span className="text">Calendar</span>
-                          </div>
-                        </a>
-                        <a className="col-6 col-md-4 p-0" href="#">
-                          <div className="quick-actions-item">
-                            <div className="avatar-item bg-warning rounded-circle">
-                              <i className="fas fa-map"></i>
-                            </div>
-                            <span className="text">Maps</span>
-                          </div>
-                        </a>
-                        <a className="col-6 col-md-4 p-0" href="#">
-                          <div className="quick-actions-item">
-                            <div className="avatar-item bg-info rounded-circle">
-                              <i className="fas fa-file-excel"></i>
-                            </div>
-                            <span className="text">Reports</span>
-                          </div>
-                        </a>
-                        <a className="col-6 col-md-4 p-0" href="#">
-                          <div className="quick-actions-item">
-                            <div className="avatar-item bg-success rounded-circle">
-                              <i className="fas fa-envelope"></i>
-                            </div>
-                            <span className="text">Emails</span>
-                          </div>
-                        </a>
-                        <a className="col-6 col-md-4 p-0" href="#">
-                          <div className="quick-actions-item">
-                            <div className="avatar-item bg-primary rounded-circle">
-                              <i className="fas fa-file-invoice-dollar"></i>
-                            </div>
-                            <span className="text">Invoice</span>
-                          </div>
-                        </a>
-                        <a className="col-6 col-md-4 p-0" href="#">
-                          <div className="quick-actions-item">
-                            <div className="avatar-item bg-secondary rounded-circle">
-                              <i className="fas fa-credit-card"></i>
-                            </div>
-                            <span className="text">Payments</span>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
 
+              {/* User Dropdown */}
               <li className="nav-item topbar-user dropdown hidden-caret">
                 <a
                   className="dropdown-toggle profile-pic"
                   data-bs-toggle="dropdown"
-                  href="#"
+                  href="/#"
                   aria-expanded="false"
                 >
                   <div className="avatar-sm">
-                    {/* Profile image from public folder */}
-                    <img
-                      src="/assets/img/profile.jpg"
-                      alt="profile public"
-                      className="avatar-img rounded-circle"
-                    />
-                    {/* Profile image imported */}
                     <img
                       src={profileImg}
-                      alt="profile imported"
+                      alt="Profile"
                       className="avatar-img rounded-circle"
                     />
                   </div>
                   <span className="profile-username">
                     <span className="op-7">Hi,</span>
-                    <span className="fw-bold">Hizrian</span>
+                    <span className="fw-bold"> Hizrian </span>
                   </span>
                 </a>
                 <ul className="dropdown-menu dropdown-user animated fadeIn">
@@ -366,41 +102,41 @@ const Navbar = () => {
                         <div className="avatar-lg">
                           <img
                             src={profileImg}
-                            alt="image profile"
+                            alt="profile"
                             className="avatar-img rounded"
                           />
                         </div>
                         <div className="u-text">
                           <h4>Hizrian</h4>
                           <p className="text-muted">hello@example.com</p>
-                          <a
-                            href="profile.html"
+                          <Link
+                            to="/profile"
                             className="btn btn-xs btn-secondary btn-sm"
                           >
                             View Profile
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </li>
                     <li>
                       <div className="dropdown-divider"></div>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="/profile">
                         My Profile
-                      </a>
-                      <a className="dropdown-item" href="#">
+                      </Link>
+                      <Link className="dropdown-item" to="/balance">
                         My Balance
-                      </a>
-                      <a className="dropdown-item" href="#">
+                      </Link>
+                      <Link className="dropdown-item" to="/inbox">
                         Inbox
-                      </a>
+                      </Link>
                       <div className="dropdown-divider"></div>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="/settings">
                         Account Setting
-                      </a>
+                      </Link>
                       <div className="dropdown-divider"></div>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="/logout">
                         Logout
-                      </a>
+                      </Link>
                     </li>
                   </div>
                 </ul>
@@ -408,7 +144,7 @@ const Navbar = () => {
             </ul>
           </div>
         </nav>
-        {/* <!-- End Navbar --> */}
+        {/* End Navbar */}
       </div>
     </div>
   );
